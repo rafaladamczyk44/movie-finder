@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'movie_app/style/style.css' %}">
+    <title>Your movie is....</title>
+</head>
+<body>
+    <img src="{% static 'movie_app/img/new.jpg' %}" id="background">
+
+    <section class="section"> 
+        <h1 class="title">Here is your movie: </h1>
+        
+        
+        <div class="results">
+            
+            <p id="movie-title"> {{ movie_title }} </p>
+
+            {% if movie_id and movie_release_date and movie_overview %}
+            <p id="movie-id"> Movie ID: {{ movie_id }} </p>
+            <p id="release-date">Released on {{ movie_release_date }} </p>
+            <p id="movie-overview"> Overview: {{ movie_overview }} </p>
+            {% endif %}
+        </div>
+
+        <a href="/"> <button class="page-button"> Try again</button></a>
+
+    </section> 
+
+    <p id="signature1">Photo by Felix Mooneeram on Unsplash</p>
+</body>
+</html>
+

@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap" rel="stylesheet">
+   
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'movie_app/style/style.css' %}">
+    
+    <title>What movie to watch?</title>
+</head>
+<body>
+
+    <img src="{% static 'movie_app/img/new.jpg' %}" id="background">
+
+    <!-- <div class="lds-ring"><div></div><div></div><div></div><div></div></div> -->
+
+    <section class="section"> 
+        
+        <h1 id="page-title"> Welcome To Movie Generator!  </h1>
+        
+        <h2 class="title">Can't decide? <br>Let me help you!</h2>
+
+        <form action="/result" method="GET">
+            
+            {{form}}
+
+            <button class="page-button form-element"> <span><img id="button-icon" src="{% static 'movie_app/img/cinema.png' %}" alt=""></span></button>
+        </form>
+
+        {% if warning %}
+        <h2 class="title warning"> {{warning}}  </h2>
+        {% endif %}
+
+    </section> 
+
+    <div class="signaturs">
+        <p>Designed by Rafał Adamczyk</p>
+        <p>Photo by Felix Mooneeram on Unsplash</p>
+    </div>
+    
+
+    <!-- SCRIPTS -->
+    <script src="{% static 'movie_app/js/app.js' %}"></script>
+
+</body>
+</html>
