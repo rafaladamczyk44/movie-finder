@@ -68,30 +68,16 @@ body {
   font-size: 3rem;
   letter-spacing: 5px;
   color: white;
-}
-
-.section #page-title span {
-  opacity: 0;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
-  display: inline-block;
-  -webkit-transform: translateY(50px);
-          transform: translateY(50px);
-}
-
-.section #page-title .title-fade {
-  opacity: 1;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
+  text-transform: uppercase;
 }
 
 .section .title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin: auto;
@@ -101,7 +87,7 @@ body {
   font-size: 2rem;
   letter-spacing: 5px;
   text-transform: uppercase;
-  color: blue;
+  color: white;
 }
 
 .section .warning {
@@ -129,6 +115,7 @@ body {
   background-color: white;
   border-width: 0px;
   border: none;
+  border-radius: 10px;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   cursor: pointer;
@@ -166,6 +153,8 @@ body {
   transition: 0.3s ease-in-out;
   height: 7vh;
   width: 20vw;
+  margin-bottom: 5vh;
+  margin-top: 5vh;
 }
 
 .section .page-button:hover {
@@ -192,17 +181,20 @@ body {
 }
 
 .section .results #movie-title {
-  font-size: 3rem;
+  color: #802223;
+  -webkit-filter: brightness(1.5);
+          filter: brightness(1.5);
+  font-size: 4rem;
   margin: auto;
   margin-bottom: 2vh;
-  width: 60%;
+  width: 80%;
   min-height: 5vh;
   border-bottom: 0.5px solid grey;
 }
 
 .section .results #release-date, .section .results #movie-id {
-  width: 60%;
-  height: 3vh;
+  width: 80%;
+  min-height: 3vh;
   margin: auto;
 }
 
@@ -212,22 +204,11 @@ body {
 }
 
 .section .results #movie-overview {
-  width: 60%;
+  width: 80%;
   margin: auto;
   font-size: 1.5rem;
-  padding: 20px;
-  text-align: justify;
-}
-
-.signaturs {
-  color: white;
-  font-size: 0.8rem;
-  margin: auto;
-  margin-right: 0;
-  margin-bottom: 0;
   padding: 5px;
-  -webkit-filter: brightness(0.2);
-          filter: brightness(0.2);
+  text-align: justify;
 }
 
 @-webkit-keyframes bckgrndChange {
@@ -252,23 +233,37 @@ body {
   }
 }
 
+.signaturs {
+  color: white;
+  font-size: 0.8rem;
+  margin: auto;
+  margin-right: 0;
+  margin-bottom: 0;
+  padding: 5px;
+  -webkit-filter: brightness(0.2);
+          filter: brightness(0.2);
+}
+
 @media only screen and (max-width: 720px) {
   body {
     background-color: black;
     height: 100%;
     width: 100%;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .section {
-    width: 80%;
+    width: 85vw;
     min-height: 80vh;
     margin: auto;
     margin-top: 10vh;
+    margin-bottom: 10vh;
     padding-top: 5vh;
   }
   .section #page-title {
     color: white;
+    margin-bottom: 10vh;
   }
   .section .title {
     color: white;
@@ -285,42 +280,41 @@ body {
   .section form {
     width: 80%;
     font-size: 1rem;
+    margin-bottom: 10vh;
   }
   .section form .form-element {
     height: 12vh;
     width: 80%;
+    padding: 0.1rem;
   }
   .section .page-button {
     width: 30vw;
-    height: 12vh;
+    min-height: 10vh;
+  }
+  .section .page-button #button-icon {
+    color: white;
+    max-height: 30px;
+    max-width: 40px;
+  }
+  .section .results {
+    min-width: 80vw;
+    min-height: 40vh;
+  }
+  .section .results #movie-title {
+    font-size: 3rem;
+    min-height: 5vh;
+    word-wrap: break-word;
+    width: 85%;
+  }
+  .section .results #release-date, .section .results #movie-id {
+    max-height: 5vh;
+    width: 85%;
+  }
+  .section .results #movie-overview {
+    width: 90%;
   }
   .signaturs {
     font-size: 0.5rem;
-  }
-  .results {
-    width: 80vw;
-    min-height: 80vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -ms-flex-line-pack: center;
-        align-content: center;
-  }
-  .results #movie-title {
-    font-size: 1.5rem;
-    margin-bottom: 5vh;
-    min-height: 20vh;
-    word-wrap: break-word;
-  }
-  .results #movie-overview {
-    width: 80vw;
-    padding: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

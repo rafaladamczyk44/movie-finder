@@ -1,93 +1,66 @@
 .section {
-    width: 60vw;
-    min-height: 70vh;
+    width: 65vw;
+    min-height: 55vh;
     margin: auto;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid black;
+    justify-content: space-between;
     color: white;
-    background-color: black;
-    border-left: 1px solid white;
-    border-right: 1px solid white;
-    border: 5px solid blue;
+
+    background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(48, 47, 47));
+
+    border-radius: 5px;
+    border-right: 3px solid #492540;
+    border-bottom: 3px solid #492540;
+    border-radius: 20px;
+    border-bottom-right-radius: 2px;
+    // border: 5px solid #492540;
 
     #page-title {
+        display: flex;
+        align-items: center;
         margin: auto;
-        color: white;
+        min-width: 30vw;
+        min-height: 15vh;
         font-size: 3rem;
         letter-spacing: 5px;
-        z-index: 999;
-    }
-
-    .title {
-        display: block;
-        margin: auto;
-        text-align: center;
-        min-height: 10vh;
-        width: 25vw;
-        font-size: 2rem;
-        letter-spacing: 5px;
+        color: white;
         text-transform: uppercase;
     }
 
-    form {
-        min-height: 25vh;
-        width: 25vw;
+    .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
         margin: auto;
-        padding-top: 5px;
-        
-        .form-element {
-            
-            height: 7vh;
-            width: 75%;
-            margin: auto;
-            margin-bottom: 15px;
-            
-            font-family: 'Odibee Sans', cursive;
-            font-size: 1rem;
-
-            color: white;
-            background-color: #802223;
-            border-width:0px;
-            border:none;
-            transition: 0.2s ease-in-out;
-
-            &::placeholder {
-                color: white;
-            }
-
-            &:hover {
-                font-size: 1.1rem;
-            }
-
-            
-        }
-
-        .page-button {
-            cursor: pointer;
-            border: 1px solid black;
-            color: black;
-            background-color: white;
-            transition: 0.5s ease-in-out;
-            height: 7vh;
-            &:hover {
-                background-color: #802223;
-                color: white;
-            }
-        }
-
-        #signature1 {
-            transform: translateX(50%);
-            
-        }
+        text-align: center;
+        min-height: 15vh;
+        width: 30vw;
+        font-size: 2rem;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        color: white;
+        // border: 1px solid white;
     }
+
+    .warning {
+        color: $cinema-red;
+        min-height: 5vh;
+        filter: brightness(1.5);
+    }
+
+    @import 'form';
+
+    @import 'button';
+
+    @import 'results';
 }
 
 @keyframes bckgrndChange {
     from {
-        background-color: #802223;
+        background-color: $cinema-red;
         color: white;
     } to {
         color: black;

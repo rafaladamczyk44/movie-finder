@@ -1,0 +1,36 @@
+form {
+    min-height: 35vh;
+    width: 30vw;
+    margin: auto;
+    
+    .form-element {
+        
+        height: 7vh;
+        width: 75%;
+        margin: auto;
+        margin-bottom: 15px;
+        padding: 0.5rem;
+
+        font-family: 'Odibee Sans', cursive;
+        font-size: 2rem;
+
+        color: black;
+        background-color: white;
+        border-width:0px;
+        border:none;
+        border-radius: 10px;
+        transition: 0.3s ease-in-out;
+
+        cursor: pointer;
+      
+
+        &::placeholder {
+            color: black;
+        }
+
+        &:hover {
+            background-color: $cinema-red;
+            color: white;
+        }
+    }        
+}
